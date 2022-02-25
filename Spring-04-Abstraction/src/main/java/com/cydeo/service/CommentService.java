@@ -4,7 +4,7 @@ import com.cydeo.model.Comment;
 import com.cydeo.proxy.CommentNotificationProxy;
 import com.cydeo.repository.CommentRepository;
 import org.springframework.stereotype.Component;
-
+import org.springframework.beans.factory.annotation.Qualifier;
 @Component
 public class CommentService {
 
@@ -12,7 +12,7 @@ public class CommentService {
     private final CommentRepository commentRepository;
     private final CommentNotificationProxy commentNotificationProxy;
 
-    public CommentService(CommentRepository commentRepository,@Qualifer("commentPushNotificationProxy")  CommentNotificationProxy commentNotificationProxy) {
+    public CommentService(CommentRepository commentRepository, @Qualifier ("commentPushNotificationProxy")  CommentNotificationProxy commentNotificationProxy) {
         this.commentRepository = commentRepository;
         this.commentNotificationProxy = commentNotificationProxy;
     }
