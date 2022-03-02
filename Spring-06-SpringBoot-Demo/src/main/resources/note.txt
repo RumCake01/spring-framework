@@ -1,0 +1,52 @@
+What  is Spring Boot
+
+Archetype? -> folder structure.
+
+Spring Project Structure:
+
+Src/main/java  :  Contains application source code
+Src/main/resources :  contains non-java resources (html code, screenshots, etc)
+Src/test/java :  contains test code (Unit tests)
+
+Mvnw and mvnw.cmd  -> maven wrapper scripts. The purpose is to use these scripts to build the project event if we don’t have maven installed on our machine.
+
+Pom.xml – maven build specifications.
+
+CydeoApplication.java : this is the Spring boot main class that bootstrapts the project.
+
+Application.properties : this file initially empty but offers a place where we can specify configuration properties.
+
+Static : contains any static content (images, css, js, etc)
+
+
+Templates : contains template files that will be used to run the content to the browser (ThymeLeaf template to build user interface application, this is java- inbuild user interface, for example when we need to integrate data with html is when we need to use template pages.)
+
+CydeoApplicationTest : simple test class that ensures that the Spring application content loads successfully . We will add more tests to the mix as we develop the application.
+
+
+Build Specification:
+<parent> : this specifies that your project has spring-boot-starter-parent as its parent POM. This parent POM provides dependency management for several libraries commonly used in Spring projects. For these libraries covered by the parent POM we don’t have to specify a version because it is inherited from the parent.
+
+
+All dependencies have the work starter in their artifact ID.
+The build file will be significantly easier and smaller to manager because we don’t have to declare a dependency on every library we might need.
+
+We are able to think of our dependencies in terms of what capabilities they provide, rather than their library names(web starter dependency), starter packages provides it all.
+
+We are free from the burden of worrying about library versions. We only need to worry about which version of Spring we are using.
+
+Spring Boot plugin – very powerful.  It provides a maven goal that enables us to run the application using maven. It also ensures that all dependency libraries are included within the executable jar file.
+
+
+Bootstrapping the application :
+Because we will be running the application from an executable JAR, it is important to have a main class that will be executed when that JAR file is run.
+
+@SpringBootApplication : is a composite annotation that combines the following annotations such as below:
+
+@SpringBootConfiguration : designates this class as a configuration class. We can add java-based spring framework configuration to this class if we need to. This annotation specialized form of the @Configuration annotation.
+
+@EnableAutoConfiguration : enables Spring Boot automatic configuration. It tells Spring Boot to automatically configure any components that it think you will need.
+
+@ComponentScan : enables component scanning. This lets you declare other classes with annotation like @Component to have Spring automatically discover and register them as components in the Spring application.
+
+Main method -> calls a static run method on SpringApplication class which performs the actual bootstrapping of the application, creating the Spring Application context. The 2 parameters passed to run() method are a configuration class, and the command line arguments.
