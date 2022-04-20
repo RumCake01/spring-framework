@@ -3,6 +3,14 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Spring-00-Coupling/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-01-Core-IoC/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-02-Core-Wiring/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-03-Core-DI/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-04-Abstraction/src/main/java/com/cydeo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-05-Core-BeanScope/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-06-SpringBoot-Demo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Spring-07-Spring-MVC-Controller/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Spring-08-Spring-MVC-Model/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
